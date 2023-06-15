@@ -34,6 +34,8 @@ def butonaBasıldı():
 
     if boyunuz==""or kilonuz=="":
         sonuç.config(text="İkisini de giriniz")
+    elif boyunuz or kilonuz == str(kilonuz,boyunuz):
+        sonuç.config(text="sadece sayı giriniz")
     else:
 
         bmı= float(kilonuz)/(float(boyunuz)/100)**2
@@ -49,7 +51,7 @@ def butonaBasıldı():
         else:
             sonuç.config(text="bmı'nız {}" "\n" "Süper obezsiniz".format(bmı))
 
-    return bmı
+
 
 
 my_button=Button(text="hesapla",command=butonaBasıldı)
